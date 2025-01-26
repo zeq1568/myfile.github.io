@@ -1,0 +1,101 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body and overall layout */
+body {
+    font-family: 'Arial', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #1a1a1a;
+    color: #fff;
+    overflow: hidden;
+    margin: 0;
+}
+
+/* Container for center alignment */
+.container {
+    text-align: center;
+    animation: fadeIn 1s ease-out;
+}
+
+/* Error code style */
+.error-code {
+    font-size: 100px;
+    font-weight: bold;
+    color: #ff6347;
+    animation: shake 0.5s ease infinite;
+}
+
+/* Message style */
+.message {
+    font-size: 20px;
+    color: #bbb;
+    margin: 20px 0;
+    animation: fadeInUp 1s ease-out;
+}
+
+/* Home link style */
+.home-link {
+    font-size: 18px;
+    color: #ff6347;
+    text-decoration: none;
+    padding: 10px 20px;
+    border: 2px solid #ff6347;
+    border-radius: 5px;
+    transition: all 0.3s ease;
+}
+
+.home-link:hover {
+    background-color: #ff6347;
+    color: #fff;
+    transform: scale(1.1);
+}
+
+/* Animation for fading in the whole container */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Animation for shaking the error code */
+@keyframes shake {
+    0% {
+        transform: translateX(0);
+    }
+    25% {
+        transform: translateX(-10px);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    75% {
+        transform: translateX(-10px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+/* Animation for the message sliding in from below */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
