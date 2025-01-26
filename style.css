@@ -1,0 +1,468 @@
+.container {
+  display: grid;
+  height: 100vh;
+  place-items: center;
+
+  font-family: "Roboto Condensed";
+}
+
+.button {
+  position: absolute;
+  right: -260px;
+  top: 60px;
+  
+  width: 150px;
+  padding: 10px 20px;
+  background-color: #6a89cc;
+  border-radius: 10px;
+  text-align: center;
+
+  color: white;
+
+  z-index: 1;
+
+  &:hover {
+    cursor: pointer;
+    background-color: #5977b9;
+  }
+}
+
+.button-wrapper {
+  position: absolute;
+  bottom: 160px;
+  display: grid;
+  grid-auto-flow: column;
+  gap: 20px;
+}
+
+input {
+  position: absolute;
+  left: -270px;
+  top: 60px;
+  
+  width: 305px;
+  height: 33px;
+
+  padding-left: 10px; 
+
+  border: 2px solid #6a89cc;
+  border-radius: 10px;
+
+  font-size: 18px;
+}
+
+.captcha-label {
+  position: absolute;
+  bottom: -125px;
+  left: -265px;
+  color: lightgray;
+}
+
+.stan {
+  transform: scale(1.3);
+
+  position: absolute;
+  bottom: 275px;
+  left: 270px;
+
+  width: 250px;
+  height: 250px;
+
+  .head {
+    position: absolute;
+    top: 100px;
+    left: 50px;
+    width: 100px;
+    height: 150px;
+    background-color: tan;
+    border-radius: 100px 100px 0 0;
+
+    .eye {
+      position: absolute;
+      top: 50px;
+  
+      width: 25px;
+      height: 15px;
+  
+      background-color: white;
+  
+      border-radius: 0 0 25px 25px;
+
+      &.left {
+        left: 20px;
+      }
+
+      &.right {
+        right: 20px;
+      }
+
+      .pupil {
+        position: absolute;
+        top: 0px;
+    
+        width: 10px;
+        height: 7px;
+    
+        background-color: black;
+    
+        border-radius: 0 0 10px 10px;
+
+        &.left {
+          left: 8px;
+        }
+
+        &.right {
+          right: 8px;
+        }
+      }
+    }
+    
+    .eyebrow {
+      position: absolute;
+      top: 40px;
+  
+      width: 25px;
+      height: 5px;
+  
+      background-color: black;
+  
+      border-radius: 25px;
+
+      &.left {
+        left: 20px;
+      }
+
+      &.right {
+        right: 20px;
+      }
+    }
+  }
+
+  .hair {
+    position: absolute;
+    top: 95px;
+    left: 90px;
+    width: 20px;
+    height: 15px;
+    background-color: black;
+    border-radius: 10% 80% 10% 50% / 40% 100% 0% 110%;
+    z-index: 1;
+  }
+
+  .sunglasses {
+    position: absolute;
+    z-index: 2;
+    top: 145px;
+    left: 62px;
+    
+    .lens {
+      background-color: transparent;
+      width: 30px;
+      height: 20px;
+      position: absolute;
+      border-radius: 0 0 30px 30px;
+      border: 5px solid black;
+  
+      &.left {
+  
+      }
+      &.right {
+        left: 36px;
+      }
+    }
+  }
+
+  .ear {
+    position: absolute;
+    top: 150px;
+
+    width: 25px;
+    height: 20px;
+
+    background-color: tan;
+
+    border-radius: 0 0 25px 25px;
+
+    &.left {
+      left: 45px;
+      border-radius: 25px 0 0px 25px;
+    }
+
+    &.right {
+      right: 94px;
+      border-radius: 0 25px 25px 0px;
+    }
+  }
+
+  .nose {
+    position: absolute;
+    top: 71px;
+    left: 40px;
+    width: 20px;
+    height: 16px;
+
+    background-color: tan;
+
+    border-radius: 0 0 25px 25px;
+    box-shadow: 0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1),0px 10px 15px -3px rgba(0,0,0,0.1);
+
+    z-index: 1;
+  }
+
+  .mouth {
+    position: absolute;
+    top: 100px;
+    left: 39px;
+
+    width: 17px;
+    height: 30px;
+
+    border: solid 2px #000;
+    border-color: #000 transparent transparent transparent;
+
+    z-index: 1;
+  }
+
+  .shirt {
+    position: absolute;
+    top: 210px;
+    left: 50px;
+    width: 100px;
+    height: 61px;
+    background-color: black;
+  }
+
+  .neck {
+    position: absolute;
+    left: 40px;
+    top: -1px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-top: 15px solid tan;
+  }
+
+  .pants {
+    position: absolute;
+    left: 50px;
+    top: 270px;
+    width: 70px;
+    height: 0;
+    border-top: 40px solid #0a3d62;
+    border-left: 15px solid transparent;
+    border-right: 15px solid transparent;
+    z-index: 1;
+  }
+}
+
+.prompt {
+  position: absolute;
+  bottom: 115px;
+
+  font-size: 24px;
+  color: #0a3d62;
+}
+
+.tear {
+  position: absolute;
+  top: 58px;
+
+  width: 8px;
+  height: 0px;
+
+  background-color: #4a69bd;
+
+  &.left {
+    left: 29px;
+  }
+  &.right {
+    right: 29px;
+  }
+}
+
+.arm.right {
+  position: absolute;
+  width: 55px;
+  height: 7px;
+  background: black;
+  right: 0px;
+  top: 10px;
+
+  z-index: -1;
+}
+
+.hand.right {
+  position: absolute;
+  right: 0px;
+  top: -3px;
+
+  width: 10px;
+  height: 10px;
+
+  background-color: tan;
+}
+
+.thumb.right {
+  position: absolute;
+  right: 5px;
+  top: -3px;
+
+  width: 5px;
+  height: 5px;
+
+  background-color: tan;
+}
+
+.checkmark img {
+  position: absolute;
+  top: -3px;
+  right: -5px;
+  width: 20px;
+  height: 20px;
+  opacity: 0;
+}
+
+/* animation start */
+/* If you're reading this, leave a comment for Stan */
+
+.eye-squint {
+  .stan {
+    .head {
+      .eye {
+        height: 8px;
+      }
+    }
+  }  
+}
+
+.animating-tear {
+  .tear {
+    animation-name: tears-falling;
+    animation-duration: .25s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .eyebrow.left {
+    animation-name: tears-eyebrow-left;
+    animation-duration: .25s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .eyebrow.right {
+    animation-name: tears-eyebrow-right;
+    animation-duration: .25s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .mouth {
+    animation-name: frown;
+    animation-duration: .25s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+.animating-smile {
+  .mouth {
+    animation-name: smile;
+    animation-duration: .25s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .eyebrow.left {
+    animation-name: smile-eyebrow-left;
+    animation-duration: .25s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .eyebrow.right {
+    animation-name: smile-eyebrow-right;
+    animation-duration: .25s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+.animating-smile.told-stan {
+  .arm.right {
+    animation-name: thumbs-up;
+    animation-duration: .1s;
+    animation-delay: 0s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  .checkmark img {
+    animation-name: checkmark;
+    animation-duration: .1s;
+    animation-delay: .25s;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+}
+
+@keyframes tears-falling {
+  100% {
+    height: 80px;
+  }
+}
+
+@keyframes tears-eyebrow-left {
+  100% {
+    transform: translateY(2px) rotate(-5deg);
+  }
+}
+
+@keyframes tears-eyebrow-right {
+  100% {
+    transform: translateY(2px) rotate(5deg);
+  }
+}
+
+@keyframes frown {
+  100% {
+    border-radius: 50% / 15px 15px 0 0;
+  }
+}
+
+@keyframes smile {
+  0%, 100% {
+    top: 70px;
+    border-radius: 50% / 15px 15px 0 0;
+    transform: rotate(180deg);
+  }
+}
+
+@keyframes smile-eyebrow-left {
+  100% {
+    transform: translateY(-5px) rotate(-5deg);
+  }
+}
+
+@keyframes smile-eyebrow-right {
+  100% {
+    transform: translateY(-5px) rotate(5deg);
+  }
+}
+
+@keyframes thumbs-up {
+  100% {
+    right: -50px;
+  }
+}
+
+@keyframes checkmark {
+  100% {
+    transform: translateY(-25px);
+    opacity: 1;
+  }
+}
+
+/* animation end */
