@@ -1,3 +1,4 @@
+/* General styles */
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f9;
@@ -15,7 +16,6 @@ body {
 }
 
 h1 {
-    text-align: center;
     color: #333;
 }
 
@@ -25,6 +25,18 @@ p {
     color: #555;
 }
 
+/* Warning Message */
+.warning-message {
+    background-color: #ffcccc;
+    padding: 15px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    color: red;
+    font-weight: bold;
+    text-align: center;
+}
+
+/* Button Styles */
 .button {
     display: inline-block;
     padding: 10px 20px;
