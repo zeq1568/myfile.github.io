@@ -1,4 +1,4 @@
-const link_prefix = "https://github.com/zeq1568/zeq1568.github.io/raw/refs/heads/master/files";
+const link_prefix = "https://zeq1568.github.io/files";
 const downloads = document.querySelectorAll('download');
 
 function downloadFile(url, filename, progressBar, statusText) {
@@ -62,11 +62,11 @@ downloads.forEach(download => {
     const statusText = document.createElement('span');
     statusText.style.display = 'none';
     statusText.style.marginLeft = '10px';
-    // anchor.addEventListener('click', (e) => {
-    //    e.preventDefault();
-    //    const filename = link.split('/').pop();
-    //    downloadFile(anchor.href, filename, progressBar, statusText);
-    // });
+    anchor.addEventListener('click', (e) => {
+       e.preventDefault();
+       const filename = link.split('/').pop();
+       downloadFile(anchor.href, filename, progressBar, statusText);
+    });
     const br = document.createElement('br');
     const small = document.createElement('small');
     small.textContent = description;
