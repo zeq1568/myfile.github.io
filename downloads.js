@@ -50,6 +50,7 @@ downloads.forEach(download => {
     const description = download.getAttribute('description');
     const li = document.createElement('li');
     const anchor = document.createElement('a');
+    anchor.download = link.split('/').pop();
     anchor.href = link_prefix + link.replace(/ /g, '%20');
     anchor.textContent = link.split('/').pop();
     anchor.style.cursor = 'pointer';
@@ -61,11 +62,11 @@ downloads.forEach(download => {
     const statusText = document.createElement('span');
     statusText.style.display = 'none';
     statusText.style.marginLeft = '10px';
-    anchor.addEventListener('click', (e) => {
-        e.preventDefault();
-        const filename = link.split('/').pop();
-        downloadFile(anchor.href, filename, progressBar, statusText);
-    });
+    // anchor.addEventListener('click', (e) => {
+    //    e.preventDefault();
+    //    const filename = link.split('/').pop();
+    //    downloadFile(anchor.href, filename, progressBar, statusText);
+    // });
     const br = document.createElement('br');
     const small = document.createElement('small');
     small.textContent = description;
