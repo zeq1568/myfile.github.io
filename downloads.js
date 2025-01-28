@@ -10,10 +10,14 @@ function downloadFile(url, filename, progressBar, statusText) {
         if (event.lengthComputable) {
             const percentComplete = (event.loaded / event.total) * 100;
             progressBar.value = percentComplete;
-            const secondsRemaining = Math.round((event.total - event.loaded) / (event.loaded / (Date.now() - xhr.startTime) / 1000));
+            const elapsedTime = (Date.now() - xhr.startTime) / 1000;
+            const averageSpeed = event.loaded / elapsedTime;
+            const bytesRemaining = event.total - event.loaded;
+            const secondsRemaining = Math.round(bytesRemaining / averageSpeed);
             statusText.textContent = `${Math.round(percentComplete)}% - ${secondsRemaining} seconds remaining`;
         }
     };
+    
 
     xhr.onloadstart = () => {
         xhr.startTime = Date.now();
