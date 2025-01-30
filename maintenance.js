@@ -2,7 +2,7 @@ fetch('/maintenance.lock', { method: 'HEAD' })
     .then(response => {
         if (response.ok) {
             // Redirect to offline.html
-            window.location.href = 'offline.html';  // Open the offline page
+            window.location.replace = 'offline.html';  // Open the offline page
             
         }
     })
